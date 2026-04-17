@@ -477,11 +477,11 @@ export default function AIReadinessAssessment() {
             <p style={{ fontSize: 15, margin: 0, lineHeight: 1.65 }}>{scores.overallMessage}</p>
           </div>
 
-          {/* Email Capture */}
+          {/* Conversation Capture */}
           {!emailSent ? (
             <div style={{ ...styles.card, border: `1.5px solid ${COLORS.accent}` }}>
-              <h3 style={styles.h3}>Receive Your Full Report</h3>
-              <p style={styles.mutedText}>Enter your details below to receive a detailed PDF with your complete results, diagnostic narratives, and recommended next steps.</p>
+              <h3 style={styles.h3}>Continue the Conversation</h3>
+              <p style={styles.mutedText}>If you would like to discuss what these results mean for your organization, share your details below. No pitch. Just a focused conversation about where to go from here.</p>
               <input style={styles.input} type="text" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} />
               <input style={styles.input} type="text" placeholder="Organization" value={org} onChange={(e) => setOrg(e.target.value)} />
               <input style={styles.input} type="email" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -492,13 +492,13 @@ export default function AIReadinessAssessment() {
                 onMouseOver={(e) => email && name && (e.target.style.background = COLORS.primaryLight)}
                 onMouseOut={(e) => email && name && (e.target.style.background = COLORS.primary)}
               >
-                Send My Report
+                Request a Conversation
               </button>
             </div>
           ) : (
             <div style={{ ...styles.card, background: COLORS.successBg, textAlign: "center" }}>
               <p style={{ fontSize: 15, fontWeight: 500, color: COLORS.primary, margin: 0 }}>
-                Thank you, {name}. Your detailed report will arrive shortly.
+                Thanks, {name}. I will be in touch shortly.
               </p>
             </div>
           )}
