@@ -279,6 +279,7 @@ export default function AIReadinessAssessment() {
     input: { width: "100%", padding: "11px 14px", border: `1.5px solid ${COLORS.border}`, borderRadius: 6, fontSize: 15, fontFamily: "inherit", boxSizing: "border-box", marginBottom: 12, outline: "none" },
     scoreCircle: (score) => ({ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 48, height: 48, borderRadius: "50%", fontSize: 16, fontWeight: 700, color: "#fff", background: getTierColor(score) }),
     footer: { textAlign: "center", padding: "40px 0 20px", fontSize: 12, color: COLORS.textMuted },
+    footerLink: { color: COLORS.primary, textDecoration: "none", fontWeight: 500, borderBottom: `1px solid ${COLORS.accentLight}`, transition: "border-color 0.2s" },
   };
 
   // === INTRO ===
@@ -314,7 +315,7 @@ export default function AIReadinessAssessment() {
             </button>
           </div>
 
-          <div style={styles.footer}>Built on the AI Integration Readiness Framework by Hewman.ai</div>
+          <div style={styles.footer}>Built on the AI Integration Readiness Framework by <a href="https://hewman.ai" target="_blank" rel="noopener noreferrer" style={styles.footerLink}>Hewman.ai</a></div>
         </div>
       </div>
     );
@@ -400,7 +401,7 @@ export default function AIReadinessAssessment() {
               </button>
             )}
           </div>
-          <div style={styles.footer}>Built on the AI Integration Readiness Framework by Hewman.ai</div>
+          <div style={styles.footer}>Built on the AI Integration Readiness Framework by <a href="https://hewman.ai" target="_blank" rel="noopener noreferrer" style={styles.footerLink}>Hewman.ai</a></div>
         </div>
       </div>
     );
@@ -503,7 +504,7 @@ export default function AIReadinessAssessment() {
             </div>
           )}
 
-          <div style={styles.footer}>Built on the AI Integration Readiness Framework by Hewman.ai</div>
+          <div style={styles.footer}>Built on the AI Integration Readiness Framework by <a href="https://hewman.ai" target="_blank" rel="noopener noreferrer" style={styles.footerLink}>Hewman.ai</a></div>
         </div>
       </div>
     );
